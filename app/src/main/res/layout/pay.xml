@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:text="Чтобы купить вывод введи его колиество здесь цена за один вывод в данный момент равно."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4" />
+
+    <Button
+        android:text="Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/button2Back" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editTextPayCount"
+        android:hint="Введите количество выводов"
+        android:layout_below="@+id/textView6"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/buttonPAYCOunt" />
+
+    <TextView
+        android:text=" вывод/руб "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView6"
+        android:layout_alignBaseline="@+id/textViewPrice"
+        android:layout_alignBottom="@+id/textViewPrice"
+        android:layout_toEndOf="@+id/textViewPrice" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView4"
+        android:layout_toStartOf="@+id/textView6"
+        android:layout_above="@+id/editTextPayCount">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pbPrice" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewPrice"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentStart="true"
+        android:layout_width="50dp" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonPAYCOunt"
+        android:layout_alignEnd="@+id/buttonPAYCOunt">
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/textVihod"
+            android:gravity="center" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="113dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/pbVihod"
+            android:minHeight="30dp"
+            android:maxWidth="30dp"
+            android:minWidth="30dp"
+            android:maxHeight="30dp"
+            tools:visibility="invisible"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+    <TextView
+        android:text="количество выводов осталось"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView7"
+        android:layout_below="@+id/buttonPAYCOunt"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/buttonPAYCOunt"
+        android:layout_alignBottom="@+id/frameLayout10" />
+
+    <TextView
+        android:text="Если у вас есть промокод введите"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:layout_below="@+id/textView7"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="14dp"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Проверить"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button3Promo"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/frameLayout10" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button3Promo"
+        android:layout_alignParentStart="true">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:id="@+id/progressBar3"
+            tools:visibility="invisible"
+            android:visibility="invisible" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editTextPromo"
+            android:hint="Введите промокод"
+            android:layout_above="@+id/button3Promo"
+            android:layout_toEndOf="@+id/frameLayout4" />
+    </FrameLayout>
+
+    <Button
+        android:text="Оплатить"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonPAYCOunt"
+        android:layout_alignTop="@+id/editTextPayCount"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
